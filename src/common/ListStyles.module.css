@@ -1,0 +1,118 @@
+.listWrapper {
+  background-color: gray;
+}
+.flexbox {
+  display: flex;
+}
+.title {
+  flex: 2;
+  text-align: left;
+  font-weight: 700;
+  text-transform: uppercase;
+  position: relative;
+  padding-left: 32px;
+  color: #434c5e;
+}
+.header {
+  align-items: center;
+  padding: 10px 0 20px;
+  border-bottom: 1px #e9e9eb solid;
+  margin-bottom: 20px;
+}
+.list {
+  padding: 0;
+  margin: 0;
+  margin-top: 20px;
+  height: 380px;
+}
+.list li {
+  padding: 20px;
+  border: 1px #e9e9eb solid;
+  margin: 10px 0;
+  border-radius: 2px;
+  box-shadow: 0 0 10px 1px #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.searchBox {
+  padding: 10px 20px 10px 38px;
+  width: 100%;
+  border: 1px #e9e9eb solid;
+  border-radius: 40px;
+  box-sizing: border-box;
+  font-size: 13px;
+  flex: 2;
+  background: url("../assets/search.png") no-repeat center left 15px/16px;
+}
+.addFriend {
+  padding: 15px 20px;
+  width: 100%;
+  border: 1px #e9e9eb solid;
+  border-radius: 2px;
+  font-size: 16px;
+  box-sizing: border-box;
+  background: url("../assets/add.png") no-repeat center right 10px/20px;
+}
+
+.listtray {
+  align-items: center;
+}
+.friendName {
+  text-align: left;
+  font-weight: 600;
+}
+.friendNote {
+  font-size: 11px;
+  font: italic 400 12px "Inter", sans-serif;
+  color: #8a929e;
+  margin-top: 2px;
+}
+.actions {
+  background: url("../assets/star-outline.png") no-repeat center center/20px;
+  width: 20px;
+  height: 20px;
+  border: 0;
+  outline: none;
+  margin-left: 15px;
+  cursor: pointer;
+}
+.actionWrapper {
+  display: flex;
+}
+
+.favourite[data-fav="true"] {
+  background: url("../assets/star-filled.png") no-repeat center center/20px;
+}
+.remove {
+  background: url("../assets/remove.png") no-repeat center center/20px;
+  width: 20px;
+  height: 20px;
+}
+
+.activePage {
+  color: #ffffff;
+  background-color: #28bd8b;
+  padding: 5px 10px;
+  border-radius: 2px;
+  cursor: pointer;
+}
+.inActivePage {
+  color: #434c5e;
+  padding: 0 10px;
+  cursor: pointer;
+}
+.searchResult {
+  margin-top: 20px;
+  font: 400 20px "Inter", sans-serif;
+  color: #434c5e;
+}
+.removeButton {
+  font: 400 13px "Inter", sans-serif;
+  padding: 10px 20px;
+  background-color: #468def;
+  border-radius: 2px;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+}

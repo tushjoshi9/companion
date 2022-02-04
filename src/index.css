@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.App {
+  text-align: center;
+  width: 600px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 20px 40px;
+  border: 1px #ddd solid;
+  margin-top: 10px;
+  min-height: 600px;
+  box-shadow: 0 0 5px 1px #dedede;
+  border-radius: 2px;
+}
+
+body [data-reach-dialog-content] {
+  width: 400px;
+  margin-top: 8%;
+}
