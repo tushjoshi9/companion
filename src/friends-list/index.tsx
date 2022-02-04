@@ -4,6 +4,7 @@ import { usePagination } from "../pagination"
 import { friendsReducer } from "../common/reducer";
 import { Search } from "./search";
 import { DeleteModal } from "./delete-modal";
+import { mockFriends } from "../mocks/friends";
 
 export type friendState = {
   friendList: { id: number; name: string, favourite: boolean }[];
@@ -13,12 +14,7 @@ export type friendState = {
 }
 
 export const PersonList = () => {
-  const initialState: friendState = {
-    friendList: [],
-    searchFriendList: [],
-    currentPage: 0,
-    todosPerPage: 4
-  }
+  const initialState: friendState = mockFriends;
   const [state, dispatch] = useReducer(friendsReducer, initialState);
   const [showDialog, setShowDialog] = useState(false);
   const [deleteFriend, setDeleteFriend] = useState<friendState["friendList"][0]>({ id: 0, name: "", favourite: false });
