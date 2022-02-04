@@ -1,4 +1,4 @@
-import { friendState } from "../friends-list"
+import { friendState } from "../friends-list";
 
 type Action =
   | { type: 'addFriend'; payload: string; }
@@ -40,6 +40,6 @@ export function friendsReducer(state: friendState, action: Action) {
         currentPage: action.payload
       };
     default:
-      throw new Error();
+      return state;
   }
 }
