@@ -4,6 +4,6 @@ export const mockFriends = {
     { id: 1, name: "Dheeraj", favourite: false }
   ],
   searchFriendList: [],
-  currentPage: 0,
+  currentPage: 1,
   todosPerPage: 4
 }

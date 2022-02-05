@@ -1,0 +1,101 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Friends reducer should add a new friend 1`] = `
+Object {
+  "currentPage": 0,
+  "friendList": Array [
+    Object {
+      "favourite": false,
+      "id": 0,
+      "name": "Suraj",
+    },
+    Object {
+      "favourite": false,
+      "id": 1,
+      "name": "Dheeraj",
+    },
+    Object {
+      "favourite": false,
+      "id": 2,
+      "name": "Test Name",
+    },
+  ],
+  "searchFriendList": Array [],
+  "todosPerPage": 4,
+}
+`;
+
+exports[`Friends reducer should favourite a friend 1`] = `
+Object {
+  "currentPage": 0,
+  "friendList": Array [
+    Object {
+      "favourite": true,
+      "id": 1,
+      "name": "Dheeraj",
+    },
+    Object {
+      "favourite": false,
+      "id": 0,
+      "name": "Suraj",
+    },
+  ],
+  "searchFriendList": Array [],
+  "todosPerPage": 4,
+}
+`;
+
+exports[`Friends reducer should remove a friend 1`] = `
+Object {
+  "currentPage": 0,
+  "friendList": Array [
+    Object {
+      "favourite": false,
+      "id": 0,
+      "name": "Suraj",
+    },
+  ],
+  "searchFriendList": Array [],
+  "todosPerPage": 4,
+}
+`;
+
+exports[`Friends reducer should search friends list 1`] = `
+Object {
+  "currentPage": 0,
+  "friendList": Array [
+    Object {
+      "favourite": true,
+      "id": 1,
+      "name": "Dheeraj",
+    },
+    Object {
+      "favourite": false,
+      "id": 0,
+      "name": "Suraj",
+    },
+  ],
+  "searchFriendList": Array [],
+  "todosPerPage": 4,
+}
+`;
+
+exports[`Friends reducer should show nextpage 1`] = `
+Object {
+  "currentPage": 2,
+  "friendList": Array [
+    Object {
+      "favourite": true,
+      "id": 1,
+      "name": "Dheeraj",
+    },
+    Object {
+      "favourite": false,
+      "id": 0,
+      "name": "Suraj",
+    },
+  ],
+  "searchFriendList": Array [],
+  "todosPerPage": 4,
+}
+`;

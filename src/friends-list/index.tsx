@@ -31,6 +31,7 @@ export const PersonList = () => {
       <Search searchText={searchText} onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
         setSearch(e.target.value.replace(/ /g, ''));
         dispatch({ type: 'searchFriend', payload: e.target.value.replace(/ /g, '') });
+        dispatch({ type: 'nextPage', payload: 0 });
       }} />
     </div>
     <input type="text"
@@ -42,13 +43,13 @@ export const PersonList = () => {
           setAddFriend("");
         }
       }}
-      onChange={(e) => setAddFriend(e.target.value)}
+      onChange={(e) => setAddFriend(e.target.value.replace(/ /g, ''))}
       value={addFriend}
       placeholder="Enter your friend's name"
       required
     />
     {
-      searchText && <div className={styles.searchResult}>{itemsToLoad?.length ?? 0} search result{itemsToLoad?.length === 1 ? "" : "s"} found for <span style={{ fontWeight: "600" }}>{searchText}</span></div>
+      searchText && <div className={styles.searchResult}>{state?.searchFriendList?.length ?? 0} search result{itemsToLoad?.length === 1 ? "" : "s"} found for <span style={{ fontWeight: "600" }}>{searchText}</span></div>
     }
     <ul className={styles.list}>
       {
@@ -75,12 +76,12 @@ export const PersonList = () => {
       }
     </ul>
     <div>
-      {listItem.length > 4 &&
-        Array.from(Array(noOfPages + 1).keys()).map((i) =>
-          <span
-            className={state.currentPage === i ? styles.activePage : styles.inActivePage}
-            onClick={() => dispatch({ type: 'nextPage', payload: i })}>{i + 1}</span>
-        )}
+      {noOfPages > 1 && Array.from(Array(noOfPages).keys()).map((i) =>
+        <span
+          key={`page-${i}`}
+          className={state.currentPage === i ? styles.activePage : styles.inActivePage}
+          onClick={() => dispatch({ type: 'nextPage', payload: i })}>{i + 1}</span>
+      )}
     </div>
     <DeleteModal
       show={showDialog}

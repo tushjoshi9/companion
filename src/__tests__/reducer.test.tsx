@@ -28,7 +28,7 @@ describe("Friends reducer", () => {
     act(() => {
       dispatch({
         type: "favouriteFriend", payload: {
-          id: 2,
+          id: 1,
           value: true
         }
       });
