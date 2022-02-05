@@ -2,7 +2,7 @@
 
 exports[`Friends reducer should add a new friend 1`] = `
 Object {
-  "currentPage": 0,
+  "currentPage": 1,
   "friendList": Array [
     Object {
       "favourite": false,
@@ -27,7 +27,7 @@ Object {
 
 exports[`Friends reducer should favourite a friend 1`] = `
 Object {
-  "currentPage": 0,
+  "currentPage": 1,
   "friendList": Array [
     Object {
       "favourite": true,
@@ -47,7 +47,7 @@ Object {
 
 exports[`Friends reducer should remove a friend 1`] = `
 Object {
-  "currentPage": 0,
+  "currentPage": 1,
   "friendList": Array [
     Object {
       "favourite": false,
@@ -62,7 +62,7 @@ Object {
 
 exports[`Friends reducer should search friends list 1`] = `
 Object {
-  "currentPage": 0,
+  "currentPage": 1,
   "friendList": Array [
     Object {
       "favourite": true,
